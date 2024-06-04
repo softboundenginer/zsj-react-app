@@ -1,15 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/Header/index";
-import List from "./components/List/index";
-import Footer from "./components/Footer/index";
+import Total from "./components/Total/index";
+import MyNavLink from "./components/MyNavLink/index";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>React案例 --&gt;</p>
+        <p>
+          <MyNavLink to="/total">React案例 --&gt;</MyNavLink>
+        </p>
       </header>
       <div
         style={{
@@ -18,9 +20,7 @@ function App() {
           color: "#fff",
         }}
       >
-        <Header />
-        <List />
-        <Footer />
+        <Route path="/total" component={Total}></Route>
       </div>
     </div>
   );
