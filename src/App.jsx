@@ -1,8 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/Header/index";
-import List from "./components/List/index";
-import Footer from "./components/Footer/index";
+import Total from "./components/Total/index";
 
 function App() {
   return (
@@ -18,9 +16,7 @@ function App() {
           color: "#fff",
         }}
       >
-        <Header />
-        <List />
-        <Footer />
+        <Total />
       </div>
     </div>
   );
