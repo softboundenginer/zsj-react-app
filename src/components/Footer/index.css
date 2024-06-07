@@ -1,3 +1,16 @@
 .text_footer {
-  color: blue;
+  width:400px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 380px;
+}
+.btn{
+  color: #fff;
+  background: red;
+  border-radius: 24px;
+  width: 100px;
+  height: 30px;
+  line-height: 20px;
+  text-align: center;
 }
