@@ -9,7 +9,7 @@ export default class index extends Component {
     {id:'001',name:'吃饭',isDone:true},
     {id:'002',name:'睡觉',isDone:true},
     {id:'003',name:'游戏',isDone:true},
-    {id:'004',name:'kissKiss',isDone:true}]
+    {id:'004',name:'kissKiss',isDone:false}]
   }
   addTodos=(todoObj)=>{
     const { todos } = this.state;
@@ -34,13 +34,27 @@ export default class index extends Component {
     })
     this.setState({todos:newTodos});
   }
+  checkAllTodos=(done)=>{
+    const { todos } = this.state;
+    const newTodos =  todos.map(todoObj=>{
+     return {...todoObj,isDone:done}
+    })
+    this.setState({todos:newTodos});
+  }
+  clearAllDone=()=>{
+    const { todos } = this.state;
+    const newTodos =  todos.filter(todoObj=>{
+     return !todoObj.isDone
+    })
+    this.setState({todos:newTodos});
+  }
   render() {
     const {todos} = this.state
     return (
       <div>
         <Header addTodos={this.addTodos}/>
         <List todos={todos} updateTodos={this.updateTodos} deleteTodos={this.deleteTodos}/>
-        <Footer todos={todos}/>
+        <Footer todos={todos} checkAllTodos={this.checkAllTodos} clearAllDone={this.clearAllDone}/>
       </div>
     );
   }

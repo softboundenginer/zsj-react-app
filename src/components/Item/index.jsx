@@ -30,7 +30,7 @@ export default class index extends Component {
     const {mouse} = this.state
     return (
       <div onMouseLeave={this.handleMouse(false)} onMouseEnter={this.handleMouse(true)}  className='big_box' style={{background:mouse?'pink':'',color:mouse?'#000':''}}><li className='item_list'>
-        <input type="checkbox" defaultChecked={isDone} onChange={this.changeCheckBox(id)}/>{name}</li>
+        <input type="checkbox"checked={isDone} onChange={this.changeCheckBox(id)}/>{name}</li>
       <button onClick={this.handleDelete(id)} style={{display:mouse ? 'block' : 'none',background:'red',color:'#fff',borderRadius:'24px',textAlign:'center'}}>删除</button>
       </div>
     )

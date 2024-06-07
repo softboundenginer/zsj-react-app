@@ -16,6 +16,7 @@ export default class index extends Component {
         {todos.map(todos=>{
             return <Item key={todos.id} {...todos} updateTodos={updateTodos} deleteTodos={deleteTodos}/>
         })}
+        <div className="is_show">{todos.length===0?'暂无代办项......':''}</div>
     </ul>
     </div>
     )

@@ -2,3 +2,8 @@
   color: #fff;
   min-height: 100px;
 }
+.is_show{
+  position: relative;
+  top:50px;
+  right:140px;
+}

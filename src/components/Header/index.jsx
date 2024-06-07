@@ -12,6 +12,7 @@ export default class index extends Component {
       }  
     const todoObj={ id:nanoid(),name:value,isDone:false}
     addTodos(todoObj)
+    event.target.value = ''
     }
   };
   render() {
