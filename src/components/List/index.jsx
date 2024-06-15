@@ -12,7 +12,7 @@ export default class index extends Component {
     const {todos,updateTodos,deleteTodos}=this.props;
     return (
     <div className="text">
-    <ul style={{  listStyle: 'none',paddingLeft:'300px',minHeight:'100px'}}>
+    <ul style={{  listStyle: 'none',paddingLeft:'95px',minHeight:'100px'}}>
         {todos.map(todos=>{
             return <Item key={todos.id} {...todos} updateTodos={updateTodos} deleteTodos={deleteTodos}/>
         })}
